@@ -17,7 +17,7 @@ namespace Interfaces
 
         string IPerson.ToString()
         {
-            return $"Name: {Name}, Age: {Age}, Deparment: {department} IsAdult{IsAdult}";
+            return $"Name: {Name}, Age: {Age}, Deparment: {this.department} IsAdult {this.IsAdult}";
         }
 
     }

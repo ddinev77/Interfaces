@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
             List<IPerson> people = new List<IPerson>();
 
             IPerson employee1 = new Employee("Стоян", 54);

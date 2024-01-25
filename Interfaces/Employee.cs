@@ -52,7 +52,7 @@ namespace Interfaces
 
 		string IPerson.ToString() 
 		{
-			return $"Name: {this.Name}, Age: {this.Age}, IsAdult{this.IsAdult()}";
+			return $"Name: {this.Name}, Age: {this.Age}, IsAdult {this.IsAdult()}";
         }
         
     }
