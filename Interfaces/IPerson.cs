@@ -8,8 +8,8 @@ namespace Interfaces
 {
     internal interface IPerson
     {
-        public int Age { get; }
-        public string Name { get; }
+        int Age { get; }
+        string Name { get; }
 
         bool IsAdult();
         string ToString();

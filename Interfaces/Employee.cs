@@ -14,37 +14,45 @@ namespace Interfaces
         public int Age
 		{
 			get { return this.age; }
-			private set { if (value < 0) 
-				{
-					throw new Exception("Invalid age");
-				}
-				this.age = value;			
+			private set { if (value >= 0)
+                    if (value >= 0)
+                    {
+                        this.age = value;
+                    }
+                    else
+                    {
+                        throw new Exception("Invalid age");
+                    }		
 			}
 		}
 		
 		public string Name
-		{
-			get { return this.name; }
+        {
+            get { return this.name; }
             private set
             {
-                if (String.IsNullOrEmpty(value))
+                if (value != string.Empty)
                 {
-					throw new Exception("Invalid name");
-				} 
-			}
-		}
+                    this.name = value;
+                }
+                else
+                {
+                    throw new Exception("Invalid name");
+                }
+            }
+        }
 
         public Employee(string name, int age)
         {
-            this.name = Name;
-			this.age = Age;
+            this.Name = name;
+			this.Age = age;
         }
 
 		public bool IsAdult() => Age >= 18;
 
-		public override string ToString() 
+		string IPerson.ToString() 
 		{
-			return base.ToString() + $"Name: {Name}, Age: {Age}, IsAdult{IsAdult}";
+			return $"Name: {this.Name}, Age: {this.Age}, IsAdult{this.IsAdult()}";
         }
         
     }

@@ -15,7 +15,7 @@ namespace Interfaces
             this.department = department;
         }
 
-        public override string ToString()
+        string IPerson.ToString()
         {
             return $"Name: {Name}, Age: {Age}, Deparment: {department} IsAdult{IsAdult}";
         }

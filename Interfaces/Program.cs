@@ -19,10 +19,7 @@
 
             foreach (IPerson person in people) 
             {
-                Console.WriteLine(employee1.ToString());
-                Console.WriteLine(employee2.ToString());
-                Console.WriteLine(manager1.ToString());
-                Console.WriteLine(manager2.ToString());
+                Console.WriteLine(person.ToString());
             }
 
         }
